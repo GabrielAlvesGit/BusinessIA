@@ -1,0 +1,10 @@
+@use '../../styles/scss/base/variables' ;
+
+.header {
+    width: 100%;
+    position: fixed;
+    background-color: red;
+    top: 0;
+    left: 0;
+    z-index: variables.$z-tooltip; 
+}
