@@ -11,6 +11,16 @@ $title-color-dark: hsl($hue, $sat, 0%);
 $text-color: hsl($hue, $sat, 46%);
 $body-color: hsl($hue, $sat, 98%);
 $container-color: #fff;
+// $background: #242836;
+// $rectangle: #1c212e;
+// $success: #ffffff33;
+// $text: #fff;
+// $arrow: #fff;
+// $checkmark: #fff;
+$primary-color-white: #fff;
+$primary-color-yellow: rgbA(255, 191, 0, 1);
+$primary-color-black: #141414;
+$shadow: rgba(10, 22, 50, 0.24);
 
 /*========== Fonte e tipografia  ==========*/
 $body-font: "Poppins", sans-serif;
@@ -29,6 +39,7 @@ $tiny-font-size: 0.625rem;
 $font-normal: 400;
 $font-medium: 500;
 $font-semi-bold: 600;
+$font-semi-bold-gold: 700;
 
 /*========== Margens Bottom ==========*/
 /*.5rem = 8px | 1rem = 16px ...*/
@@ -41,19 +52,17 @@ $mb-2: 2rem;
 $mb-2-5: 2.5rem;
 $mb-3: 3rem;
 
+/*========== Padding Bottom ==========*/
+$py-1: 0.75rem;
+
+
 /*========== z index ==========*/
 $z-tooltip: 10;
 $z-fixed: 100;
 $z-modal: 1000;
 
 /* ========= Btn Download ========= */
-$background: #242836;
-$rectangle: #1c212e;
-$success: #ffffff33;
-$text: #fff;
-$arrow: #fff;
-$checkmark: #fff;
-$shadow: rgba(10, 22, 50, 0.24);
+
 
 /* ========= Switcher Titulo ========= */
 $title-switcher: #666666;

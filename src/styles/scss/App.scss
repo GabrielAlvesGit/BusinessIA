@@ -11,7 +11,7 @@
 @use './base/font';
 
 /*=============== Global ===============*/
-
+@use './global/header';
 
 /*=============== Pages ===============*/
-@use './global/header';
+@use './pages/banner';
