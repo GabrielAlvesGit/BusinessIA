@@ -1,4 +1,5 @@
 @use '../base/variables';
+@use '../base/grid';
 
 .banner {
   position: relative;
@@ -81,6 +82,128 @@
       background: url('../../../assets/images/menu.svg') no-repeat;
       background-position: right;
       background-size: contain;
+
+      >.header {
+        padding: 0;
+
+        >&__nav {
+          display: flex;
+
+          &__menu {
+            display: initial;
+          }
+
+          &__toggle {
+            display: initial;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: grid.$screen-lg) {
+  .banner {
+    &__left {
+     width: 490px;
+     position: absolute;
+     right: 0;
+     top: -127px;
+     bottom: 0;
+     object-fit: cover;
+     overflow: hidden;
+     z-index: 10;
+ 
+     &__img {
+      position: relative;
+       
+      .nav {
+          position: absolute;
+          background-color: variables.$primary-color-black;
+          flex-direction: row-reverse;
+          align-items: flex-start;
+          justify-content: flex-end;
+          height: 100%;
+          padding: 64px;
+          overflow-y: auto;
+          scrollbar-width: thin;
+
+          &__logo {
+             display: none;
+
+              &__link {
+                  display: none;
+              }
+
+              &__img {
+                  display: flex;
+                  max-width: 100%;
+                  height: auto;
+              }
+          }
+
+          &__menu {
+            display: flex;
+            width: 90%;
+
+            &__list {
+               width: 100%;
+               flex-direction: column;
+               align-items: start;
+               gap: 0;
+               
+               &__item {
+                width: 100%;
+
+                &__link {
+                  position: relative;
+                  color: variables.$primary-color-white;
+                  justify-content: space-between;
+                  padding: 0;
+
+                  &::after {
+                    background: url("data:image/svg+xml,%3csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10.6865 11.5769L14.5199 7.74358L15.1096 8.33333L10.6865 12.7564L8.47498 10.5449L6.26344 8.33333L6.85319 7.74358L10.6865 11.5769Z' fill='%23fff'/%3e%3c/svg%3e") no-repeat center center;
+                  }
+                }
+
+                &:hover {
+                  .submenu {
+                     height: 100%;
+                     opacity: 1;
+                     pointer-events: visible;
+                  }
+                }
+
+                .submenu {
+                  position: initial;
+                  height: 0;
+                  overflow: hidden;
+                  opacity: 0;
+                  padding: 0;
+                  pointer-events: none;
+                }
+               }
+            }
+          }
+
+          &__toggle  {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 64px;
+              height: 64px;
+              position: absolute;
+              top: 71px;
+              transform: translateX(-50%);
+              right: 0;
+              background: variables.$primary-color-yellow;
+              border-radius: 9999px;
+              cursor: pointer;
+              color: black;
+          }
+        }
+      }
     }
   }
 }

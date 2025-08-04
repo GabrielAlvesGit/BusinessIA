@@ -1,4 +1,5 @@
 import React from 'react';
+import Nav from '../../components/global/nav';
 
 const Banner: React.FC = () => {
    return (
@@ -46,7 +47,7 @@ const Banner: React.FC = () => {
 
             <div className="banner__left">
                 <div className="banner__left__img">
-                   
+                        < Nav />
                 </div>
             </div>
         </div>

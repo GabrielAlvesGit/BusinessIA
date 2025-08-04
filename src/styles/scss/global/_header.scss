@@ -1,4 +1,5 @@
 @use '../base/variables' ;
+@use '../base/grid' ;
 
 .header {
     width: 100%;
@@ -7,113 +8,11 @@
     top: 0;
     left: 0;
     z-index: variables.$z-tooltip; 
-    
-    .nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    box-shadow: variables.$boxShadow-header;
+}
 
-        &__menu {
-
-            &__list {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                gap: 20px;
-                
-                &__item {
-                  
-                    &__link {
-                        display: flex;
-                        align-items: center;
-                        position: relative;
-                        min-height: 77px;
-                        padding: 15px 0;
-                        font-size: 12px;
-                        color: variables.$text-color;
-                        font-weight: 400;
-                        line-height: 16px;
-                        text-decoration: none;
-
-                        &::after {
-                            content: '';
-                            display: block;
-                            right: 0;
-                            width: 21px;
-                            height: 21px;
-                            background: url('../../../assets/icons/bx-chevron-down.svg') no-repeat center center;
-                            transition: width 0.3s ease-in-out;
-                        }
-                    }
-
-                    &:hover {
-                        .submenu {
-                            pointer-events: visible;
-                            opacity: 1;
-                        }
-                    }
-
-                    .submenu {
-                        background: variables.$body-color;
-                        left: 0;
-                        padding: 40px 0;
-                        position: absolute;
-                        top: 100%;
-                        width: 100%;
-                        opacity: 0;
-                        pointer-events: none;
-                        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-                        
-                        &__list {
-                            display: flex;
-                            gap: 35px;
-
-                            &__left {
-                                display: flex;
-
-                                &__title {
-                                    color: variables.$primary-color-black;
-                                    font-size: 24px;
-                                    font-weight:  600;
-                                    letter-spacing: -.2px;
-                                    line-height: 150%;
-                                    margin-top: 55%;
-                                }
-                            }
-
-                            &__right {
-                                display: flex;
-                                flex-wrap: wrap;
-                                gap: 40px;
-
-                                &__item {
-                                    width: 47%;
-
-                                    &__link {
-                                        display: block;
-                                        color: variables.$primary-color-black;
-                                        font-size: 16px;
-                                        font-weight: variables.$font-semi-bold-gold;
-                                        letter-spacing: -.2px;
-                                        line-height: 19px;
-                                        padding-bottom: 6px;
-                                        text-decoration: none;
-                                        transition: all .3s;
-                                    }
-
-                                    &__text {
-                                        color: variables.$text-color;
-                                        font-size: 12px;
-                                        font-weight: variables.$font-normal;
-                                        letter-spacing: .12px;
-                                        line-height: 150%;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+@media (max-width: grid.$screen-lg) {
+    .header {
+        padding: 15px 0;
     }
 }
