@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Nav: React.FC = () => {
+
+    const [isMenuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!isMenuOpen);
+        console.log('Menu toggled:', !isMenuOpen);
+    };
+
     return (
-        <nav className="nav container">
+        <nav className={`nav container ${isMenuOpen ? 'active' : ''}`}>
             <article className="nav__logo">
                 <a href="index.html" className="nav__logo__link">BusinessIA</a>
                 <img className="nav__logo__img" src="/src/assets/icons/logoBusinessIA.png" alt="BusinessIA" />
@@ -72,15 +80,11 @@ const Nav: React.FC = () => {
                 {/* <i className="uil uil-times nav__close" onClick={() => showMenu(!Toggle)}></i> */}
             </div>
 
-            <div className="nav__toggle">
-                <i className='bx bx-menu' ></i>
-                
-                    <img className="" src="/src/assets/icons/logoBusinessIA.png" alt="BusinessIA" />
-                
-                <i className='bx bx-menu' ></i>
+            <div className="nav__toggle" >
+                <i className='bx bx-menu' onClick={toggleMenu}></i>
+                <i className="uil uil-times nav__close"></i>
+                <img className="" src="/src/assets/icons/logoBusinessIA.png" alt="BusinessIA" />
             </div>
-
-            
         </nav>
     )
 }

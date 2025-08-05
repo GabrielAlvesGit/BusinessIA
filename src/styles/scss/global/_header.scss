@@ -9,9 +9,15 @@
     left: 0;
     z-index: variables.$z-tooltip; 
     box-shadow: variables.$boxShadow-header;
+    transition: 0.45s all;
+    cursor: pointer;
+
+    &:hover {
+        transition: 0.35s all;
+    }
 }
 
-@media (max-width: grid.$screen-lg) {
+@media (max-width: 1200px) {
     .header {
         padding: 15px 0;
     }

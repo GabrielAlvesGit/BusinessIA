@@ -3,8 +3,8 @@
 
 .banner {
   position: relative;
-  background-color: linear-gradient( black 80%, transparent 100%);
-  
+  background-color: linear-gradient(black 80%, transparent 100%);
+
   &__content {
     display: flex;
     justify-content: space-between;
@@ -21,7 +21,7 @@
 
     &__top {
       width: 50%;
-      
+
       &__title {
         font-size: variables.$big-font-size;
         font-weight: variables.$font-semi-bold-gold;
@@ -43,17 +43,17 @@
             display: flex;
             gap: 15px;
 
-           
+
           }
 
           &:nth-child(2) &__link,
-          &:nth-child(3) &__link  {
+          &:nth-child(3) &__link {
             background-color: variables.$primary-color-white;
             color: variables.$primary-color-black;
           }
 
           &:nth-child(4) &__link,
-          &:nth-child(5) &__link  {
+          &:nth-child(5) &__link {
             background-color: transparent;
             color: variables.$primary-color-black;
             border: 1px solid variables.$primary-color-black;
@@ -83,18 +83,41 @@
       background-position: right;
       background-size: contain;
 
-      >.header {
-        padding: 0;
+      .nav {
+        right: -999px;
 
-        >&__nav {
+        &__logo,
+        &__menu {
+          display: none;
+        }
+
+        &__toggle {
           display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 90px;
+          height: 90px;
+          position: absolute;
+          transform: translateX(-50%);
+          top: 91px;
+          left: 70%;
+          right: 0;
+          background: variables.$primary-color-yellow;
+          border-radius: 9999px;
+          cursor: pointer;
+          color: black;
 
-          &__menu {
+          &.active {
+            position: fixed;
+          }
+          
+          img {
             display: initial;
           }
 
-          &__toggle {
-            display: initial;
+          .bx-menu, 
+          .nav__close {
+            display: none;
           }
         }
       }
@@ -103,22 +126,22 @@
 }
 
 
-@media (max-width: grid.$screen-lg) {
+@media (max-width: 1200px) {
   .banner {
     &__left {
-     width: 490px;
-     position: absolute;
-     right: 0;
-     top: -127px;
-     bottom: 0;
-     object-fit: cover;
-     overflow: hidden;
-     z-index: 10;
- 
-     &__img {
-      position: relative;
-       
-      .nav {
+      width: 490px;
+      position: absolute;
+      right: 0;
+      top: -127px;
+      bottom: 0;
+      object-fit: cover;
+      overflow: hidden;
+      z-index: 10;
+
+      &__img {
+        position: relative;
+
+        .nav {
           position: absolute;
           background-color: variables.$primary-color-black;
           flex-direction: row-reverse;
@@ -129,18 +152,22 @@
           overflow-y: auto;
           scrollbar-width: thin;
 
+          &.active {
+            left: 0;
+          }
+          
           &__logo {
-             display: none;
+            display: none;
 
-              &__link {
-                  display: none;
-              }
+            &__link {
+              display: none;
+            }
 
-              &__img {
-                  display: flex;
-                  max-width: 100%;
-                  height: auto;
-              }
+            &__img {
+              display: flex;
+              max-width: 100%;
+              height: auto;
+            }
           }
 
           &__menu {
@@ -148,12 +175,12 @@
             width: 90%;
 
             &__list {
-               width: 100%;
-               flex-direction: column;
-               align-items: start;
-               gap: 0;
-               
-               &__item {
+              width: 100%;
+              flex-direction: column;
+              align-items: start;
+              gap: 0;
+
+              &__item {
                 width: 100%;
 
                 &__link {
@@ -169,38 +196,77 @@
 
                 &:hover {
                   .submenu {
-                     height: 100%;
-                     opacity: 1;
-                     pointer-events: visible;
+                    height: calc(100vh - 48px);
+                    visibility: visible;
+                    overflow-y: hidden;
                   }
                 }
 
                 .submenu {
+                  display: block;
                   position: initial;
-                  height: 0;
-                  overflow: hidden;
-                  opacity: 0;
+                  width: 100%;
+                  background: transparent;
+                  height: 0px;
+                  transition: 0.6s;
+                  z-index: 1000;
                   padding: 0;
-                  pointer-events: none;
+
+                  .container {
+                    width: 100%;
+                    padding-right: 0;
+                    padding-left: 0;
+                    margin-right: 0;
+                    margin-left: 0;
+                  }
+
+                  &__list {
+
+                    &__left {
+                      display: none;
+                    }
+
+                    &__right {
+                      flex-wrap: nowrap;
+                      flex-direction: column;
+
+                      &__item {
+                        width: 100%;
+
+                        &__link {
+                          color: variables.$primary-color-white;
+                          padding-bottom: 15px;
+                          margin-bottom: 15px;
+                          border-bottom: 2px solid variables.$primary-color-yellow;
+                        }
+                      }
+                    }
+                  }
                 }
-               }
+              }
             }
           }
 
-          &__toggle  {
+          &__toggle {
+            right: -9px;
+            top: 71px;
+            left: initial;
+            width: 64px;
+            height: 64px;
+
+            img {
+              display: none;
+            }
+
+            .bx-menu {
               display: flex;
-              align-items: center;
-              justify-content: center;
-              width: 64px;
-              height: 64px;
-              position: absolute;
-              top: 71px;
-              transform: translateX(-50%);
-              right: 0;
-              background: variables.$primary-color-yellow;
-              border-radius: 9999px;
-              cursor: pointer;
-              color: black;
+
+
+              &.active {
+                display: none;
+              }
+            }
+            
           }
         }
       }
