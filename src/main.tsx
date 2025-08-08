@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.tsx'
 
 // 1 - Configuração de router
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 
 /* ============ Pages =========== */
 import Home from "./page-template/Home/Home.tsx"
@@ -43,7 +43,11 @@ const router = createBrowserRouter([
         path: "/contato/:id",
         element: <ContactDetails />,
       },
-     
+       // 7 - navigate para páginas não existentes
+      {
+        path: "oldcontact",
+        element: <Navigate to="/" />,
+      },
     ],
   },
 ]);
