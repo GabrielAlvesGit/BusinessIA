@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import  { Link } from 'react-router-dom';
 
 const Nav: React.FC = () => {
 
@@ -12,14 +13,12 @@ const Nav: React.FC = () => {
     return (
         <nav className={`nav container ${isMenuOpen ? 'active' : ''}`}>
             <article className="nav__logo">
-                <a href="index.html" className="nav__logo__link">BusinessIA</a>
+                <Link to="/" className="nav__logo__link">BusinessIA</Link>
                 <img className="nav__logo__img" src="/src/assets/icons/logoBusinessIA.png" alt="BusinessIA" />
             </article>
 
             <div className="nav__menu">
                 <ul className="nav__menu__list">
-                    <a href="../../page-template/Login/AuthPage.tsx">llLogin teste</a>
-
                     <li className="nav__menu__list__item">
                         <a className="nav__menu__list__item__link" href="#">
                             <span>Os 3 Porquês</span>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from '../../components/global/nav';
+import  { Link } from 'react-router-dom';
 
 const Banner: React.FC = () => {
    return (
@@ -37,9 +38,9 @@ const Banner: React.FC = () => {
                         </li>
 
                         <li className="banner__content__bottom__list__item">
-                            <a className="banner__content__bottom__list__item__link button" href="#">
-                                Light&Dark
-                            </a>
+                            <Link className="banner__content__bottom__list__item__link button" to="/login">
+                                Login
+                            </Link>
                         </li>
                     </ul>
                 </div>
