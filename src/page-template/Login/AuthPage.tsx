@@ -23,7 +23,8 @@ const AuthPage: React.FC = () => {
           </div>
         </div>
         <div className="auth__right__footer">
-          <img src="../assets/img/LogoBusiness.IA.png" alt="Logo" className="auth__right__footer__logo" />
+          <img className="auth__right__footer__logo" alt="BusinessIA" src="/src/assets/icons/logoBusinessIA.png"/>
+
           <div className="auth__right__footer__links">
             <a href="#" className="auth__right__footer__links__item">Terms of use</a>
             <span className="auth__right__footer__links__separator">|</span>
