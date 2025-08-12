@@ -23,9 +23,9 @@ const WhatWeOffer: React.FC = () => {
                   } ${isNeighbor ? 'whatWeOffer__bottom__left__option--neighbor' : ''} whatWeOffer__bottom__left__option--${item.color}`}
                   onClick={() => setActivePlan(item.name)}
                 >
-                  <div className="whatWeOffer__bottom__left__option__inner ">
-                    <p className={`whatWeOffer__bottom__left__option__title whatWeOffer__bottom__left__option-title--${item.color}`}>{item.name}</p>
-                    <p className="whatWeOffer__bottom__left__option-range">{item.description}</p>
+                  <div className="whatWeOffer__bottom__left__option__inner">
+                    <p className="whatWeOffer__bottom__left__option__title">{item.name}</p>
+                    <p className="whatWeOffer__bottom__left__option__range">{item.description}</p>
                   </div>
                 </div>
               );
@@ -36,7 +36,7 @@ const WhatWeOffer: React.FC = () => {
               activePlan === item.name && (
                 <div
                   key={item.name}
-                  className={`whatWeOffer__bottom__right__contents whatWeOffer__bottom__right__contents--${item.color}`}
+                  className={`whatWeOffer__bottom__right__contents whatWeOffer__bottom__right__contents--${item.active}`}
                 >
                   <div className="whatWeOffer__bottom__right__contents__content">
                     <p
@@ -63,19 +63,19 @@ const WhatWeOffer: React.FC = () => {
                               <path d="M9 11l3 3l8 -8"></path>
                               <path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9"></path>
                             </svg>
-                            <p>{benefit}</p>
+                            <p className="whatWeOffer__bottom__right__contents__content__list__item__text">{benefit}</p>
                           </li>
                         ))}
                       </ul>
                     )}
-                    {(item.zeroFees || item.differentials) && (
-                      <div className="whatWeOffer__bottom__right__contents__content__list__content">
-                        <p className="whatWeOffer__bottom__right__contents__content__list__content__title">
-                          {item.zeroFees ? 'Taxa Zero:' : 'Diferenciais:'}
+                    {(item.titleDifferential || item.differentials) && (
+                      <div className="whatWeOffer__bottom__right__contents__content__boxText">
+                        <p className="whatWeOffer__bottom__right__contents__content__boxText__title">
+                          {item.titleDifferential}
                         </p>
-                        <ul className="whatWeOffer__bottom__right__contents__content__list__content__disc">
-                          {(item.zeroFees || item.differentials || []).map((item, index) => (
-                            <li key={index} className="whatWeOffer__bottom__right__contents__content__list__content__item">{item}</li>
+                        <ul className="whatWeOffer__bottom__right__contents__content__boxText__list">
+                          {( item.differentials || []).map((item, index) => (
+                            <li key={index} className="whatWeOffer__bottom__right__contents__content__boxText__list__item">{item}</li>
                           ))}
                         </ul>
                       </div>
@@ -83,7 +83,7 @@ const WhatWeOffer: React.FC = () => {
                     <div className="whatWeOffer__bottom__right__contents__content__buttons">
                       <a
                         href="/investidor"
-                        className="whatWeOffer__bottom__right__contents__content__button whatWeOffer__bottom__right__contents__content__button--secondary"
+                        className={`whatWeOffer__bottom__right__contents__content__buttons__button whatWeOffer__bottom__right__contents__content__buttons__button--primary--${item.color}`}
                       >
                         Saiba mais
                       </a>
@@ -91,7 +91,7 @@ const WhatWeOffer: React.FC = () => {
                         href="https://cadastro.ativainvestimentos.com.br/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="whatWeOffer__bottom__right__contents__content__button whatWeOffer__bottom__right__contents__content__button--primary"
+                        className={`whatWeOffer__bottom__right__contents__content__buttons__button whatWeOffer__bottom__right__contents__content__buttons__button--secondary--${item.color}`}
                       >
                         Abra sua Conta
                       </a>

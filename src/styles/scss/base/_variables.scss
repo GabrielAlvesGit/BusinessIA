@@ -23,6 +23,9 @@ $primary-color-black: #141414;
 $primary-color-gray: #e8ecef;
 $shadow: rgba(10, 22, 50, 0.24);
 
+
+$primary-color-WhatsApp: #1daa61;
+
 /*========== Fonte e tipografia  ==========*/
 $body-font: "Poppins", sans-serif;
 
@@ -69,7 +72,7 @@ $z-modal: 1000;
 $title-switcher: #666666;
 
 /* ========= Shadow Header ========= */
-$boxShadow-header: 0 -1px 4px rgb(0, 0, 0, 0.15);
+$boxShadow-header: 0px 0px 60px rgba(0, 0, 0, 0.15);
 
 /* ========= Shadow Home img Perfil ========= */
 $box-shadow-home-img: inset 0 0 0 9px rgb(51 51 51 / 80%);
