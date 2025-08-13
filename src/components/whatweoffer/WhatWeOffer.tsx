@@ -82,13 +82,13 @@ const WhatWeOffer: React.FC = () => {
                     )}
                     <div className="whatWeOffer__bottom__right__contents__content__buttons">
                       <a
-                        href="/investidor"
+                        href="#r"
                         className={`whatWeOffer__bottom__right__contents__content__buttons__button whatWeOffer__bottom__right__contents__content__buttons__button--primary--${item.color}`}
                       >
                         Saiba mais
                       </a>
                       <a
-                        href="https://cadastro.ativainvestimentos.com.br/"
+                        href="#"
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`whatWeOffer__bottom__right__contents__content__buttons__button whatWeOffer__bottom__right__contents__content__buttons__button--secondary--${item.color}`}

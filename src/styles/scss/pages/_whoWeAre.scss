@@ -1,0 +1,56 @@
+@use '../base/variables';
+
+.WhoWeAre {
+
+    &__top {
+        background: linear-gradient(90deg,#1a1b27 71%, #302b63 135%);
+        position: relative;
+        height: 650px;
+        padding: 120px 0px 160px 0px;
+        overflow: hidden;
+        
+        &__backgroundImage {
+            background: url('../../../assets/images/arteMobile.png') no-repeat;
+            background-size: auto;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+            max-width: 170.4rem;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            margin: 0 auto;
+
+            >.container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 51px;
+                position: absolute;
+                transform: translate(-50%, 50%);
+                left: 50%;
+            }
+
+            &__title {
+                font-size: 35px;
+                text-align: center;
+                color: variables.$primary-color-white;
+
+                &__inline {
+                    font-style: italic;
+                    color: variables.$primary-color-yellow;
+                }
+            }
+
+            &__text {
+                color: variables.$primary-color-white;
+                text-align: center;
+                font-size: 24px;
+                font-weight: 300;
+                 line-height: 3.4rem;
+                max-width: 70%;
+            }
+        }
+    }
+}
