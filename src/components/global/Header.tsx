@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from '../../components/global/nav';
+import Nav from '../../components/global/Nav';
 
 
 const Header: React.FC = () => {

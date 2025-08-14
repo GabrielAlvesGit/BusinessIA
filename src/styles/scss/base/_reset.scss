@@ -36,6 +36,8 @@ h2,
 h3 {
     color: variables.$title-color;
     font-weight: variables.$font-semi-bold;
+    padding: 0 0 12px;
+    margin: 0 0 12px;
 }
 
 ul {
@@ -45,6 +47,17 @@ ul {
 a {
     text-decoration: none;
     cursor: pointer;
+    transition: 0.45s all;
+
+    &:hover {
+        opacity: 0.9;
+        transition: 0.45s all;
+    }
+}
+
+p {
+    padding: 0 0 12px;
+    margin: 0 0 12px;
 }
 
 button {
@@ -78,8 +91,6 @@ img {
 .section__subtitle {
     text-align: center;
 }
-
-
 
 
 /*=============== BUTTONS ===============*/
