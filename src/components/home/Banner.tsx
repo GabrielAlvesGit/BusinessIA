@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from '../../components/global/nav';
+import Nav from '../global/Nav';
 import  { Link } from 'react-router-dom';
 
 const Banner: React.FC = () => {
