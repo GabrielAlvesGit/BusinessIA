@@ -80,7 +80,7 @@ const Nav: React.FC = () => {
             <div className="nav__toggle" >
                 <i className='bx bx-menu' onClick={toggleMenu}></i>
                 <i className="uil uil-times nav__close"></i>
-                <img className="" src="/src/assets/icons/logoBusinessIA.png" alt="BusinessIA" />
+                <img className="" src={logoBusinessIA}  alt="BusinessIA" />
             </div>
         </nav>
     )

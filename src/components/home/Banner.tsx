@@ -3,6 +3,7 @@ import Nav from '../global/Nav';
 import  { Link } from 'react-router-dom';
 
 const Banner: React.FC = () => {
+    
    return (
       <section className="banner">
         <div className="banner__content">

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import  { Link } from 'react-router-dom';
 import { faqItems } from './FaqItems';
+import logoBusinessIA from '../../assets/icons/logoBusinessIA.png';
 
 const Footer: React.FC = () => {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -16,7 +17,7 @@ const Footer: React.FC = () => {
                     <div className="footer__top__left"> 
                         <div className="footer__top__left__logo">
                             <Link to="/" className="footer__top__left_logo__link">
-                                <img className="footer__top__left_logo__link__img" src="/src/assets/icons/logoBusinessIA.png" alt="BusinessIA Logo" />
+                                <img className="footer__top__left_logo__link__img" src={logoBusinessIA} alt="BusinessIA Logo" />
                             </Link>
                         </div>
 
