@@ -10,6 +10,13 @@ const Nav: React.FC = () => {
         console.log('Menu toggled:', !isMenuOpen);
     };
 
+     const [isAnswerOpen, setAnswerOpen] = useState(false);
+
+    const toggleAnswer = () => {
+        setAnswerOpen(!isAnswerOpen);
+        console.log('Menu toggled:', !isAnswerOpen);
+    };
+  
     return (
         <nav className={`nav container ${isMenuOpen ? 'active' : ''}`}>
             <article className="nav__logo">
@@ -20,63 +27,48 @@ const Nav: React.FC = () => {
             <div className="nav__menu">
                 <ul className="nav__menu__list">
                     <li className="nav__menu__list__item">
-                        <a className="nav__menu__list__item__link" href="#">
-                            <span>Os 3 Porquês</span>
-                        </a>
+                        <Link  className="nav__menu__list__item__link" onClick={toggleAnswer} to="/">
+                            <span className={` ${isAnswerOpen ? 'active' : ''}`} >Os 3 Porquês</span>
+                        </Link>
 
-                        <article className="submenu">
+                        <div className={`submenu ${isAnswerOpen ? 'submenu--active' : ''}`}>
                             <div className="container">
                                 <ul className="submenu__list">
-
-                                    
                                     <div className="submenu__list__left">
                                         <span className="submenu__list__left__title"> Os 3 Porquês</span>
                                     </div>
                                     
                                     <ul className="submenu__list__right">
                                         <li className="submenu__list__right__item">
-                                            <a className="submenu__list__right__item__link" href="#">
-                                                Por que
-                                            </a>
-                                            <p className="submenu__list__right__item__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quos, delectus soluta praesentium nulla itaque atque vel cupiditate quasi odio molestias iusto numquam dignissimos dolores omnis laboriosam voluptatem mollitia architecto.</p>
-                                        </li>
-
-                                        <li className="submenu__list__right__item">
-                                            <a className="submenu__list__right__item__link" href="#">
-                                                Por que
-                                            </a>
-                                            <p className="submenu__list__right__item__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quos, delectus soluta praesentium nulla itaque atque vel cupiditate quasi odio molestias iusto numquam dignissimos dolores omnis laboriosam voluptatem mollitia architecto.</p>
-                                        </li>
-
-                                        <li className="submenu__list__right__item">
-                                            <a className="submenu__list__right__item__link" href="#">
-                                                Por que
-                                            </a>
+                                            <Link className="submenu__list__right__item__link" to="#">Por que</Link>
                                             <p className="submenu__list__right__item__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quos, delectus soluta praesentium nulla itaque atque vel cupiditate quasi odio molestias iusto numquam dignissimos dolores omnis laboriosam voluptatem mollitia architecto.</p>
                                         </li>
                                         
+                                        <li className="submenu__list__right__item">
+                                            <Link className="submenu__list__right__item__link" to="#">Por que</Link>
+                                            <p className="submenu__list__right__item__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quos, delectus soluta praesentium nulla itaque atque vel cupiditate quasi odio molestias iusto numquam dignissimos dolores omnis laboriosam voluptatem mollitia architecto.</p>
+                                        </li>
+
+                                        <li className="submenu__list__right__item">
+                                            <Link className="submenu__list__right__item__link" to="#">Por que</Link>
+                                            <p className="submenu__list__right__item__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quos, delectus soluta praesentium nulla itaque atque vel cupiditate quasi odio molestias iusto numquam dignissimos dolores omnis laboriosam voluptatem mollitia architecto.</p>
+                                        </li>
                                     </ul>
                                 </ul>   
                             </div>
-                        </article>
+                        </div>
                     </li>
 
                     <li className="nav__menu__list__item">
-                        <a className="nav__menu__list__item__link" href="#">Plataformas Digitais
-                            
-                        </a>
+                        <Link className="nav__menu__list__item__link" to="#">Plataformas Digitais</Link>
                     </li>
                         
                     <li className="nav__menu__list__item">
-                        <a className="nav__menu__list__item__link" href="#">Contato
-                            
-                        </a>
+                        <Link className="nav__menu__list__item__link" to="#">Contato</Link>
                     </li>
 
                     <li className="nav__menu__list__item">
-                        <a className="nav__menu__list__item__link" href="#">Quem Somos
-                            
-                        </a>
+                        <Link className="nav__menu__list__item__link" to="#">Quem Somos</Link>
                     </li>
                 </ul>
 
