@@ -1,6 +1,7 @@
 @use '../base/variables';
 
 .WhoWeAre {
+
   &__top {
     background: linear-gradient(90deg, #1a1b27 71%, #302b63 135%);
     position: relative;
@@ -103,13 +104,15 @@
         z-index: 2;
 
         &__box {
+
           &__title {
             font-size: 25px;
             line-height: 4rem;
             max-width: 39rem;
-            margin-bottom: 3.2rem;
             font-weight: 400;
             color: variables.$primary-color-white;
+            padding: 0;
+            margin: 0 0 3.2rem 0;
           }
 
           &__text {
@@ -118,6 +121,8 @@
             line-height: 3.2rem;
             max-width: 53.8rem;
             font-weight: 275;
+            padding: 0;
+            margin: 0;
           }
 
           &--right {
@@ -129,50 +134,49 @@
   }
 }
 
+// @media only screen and (max-width: 1024px) {
+//   .WhoWeAre {
+//     &__bottom {
+//       &__backgroundColor {
+//         &__content {
+//           padding: 0 18.6rem;
+//         }
+//       }
+//     }
+//   }
+// }
 
-@media only screen and (max-width: 1024px) {
-  .WhoWeAre {
-    &__bottom {
-      &__backgroundColor {
-        &__content {
-          padding: 0 18.6rem;
-        }
-      }
-    }
-  }
-}
+// @media only screen and (max-width: 768px) {
+//   .WhoWeAre {
+//     &__top {
+//       height: 500px;
+//       padding: 80px 0px 100px 0px;
 
-@media only screen and (max-width: 768px) {
-  .WhoWeAre {
-    &__top {
-      height: 500px;
-      padding: 80px 0px 100px 0px;
+//       &__backgroundImage {
+//         > .container {
+//           gap: 30px;
+//         }
 
-      &__backgroundImage {
-        > .container {
-          gap: 30px;
-        }
+//         &__title {
+//           font-size: 28px;
+//         }
 
-        &__title {
-          font-size: 28px;
-        }
+//         &__text {
+//           font-size: 18px;
+//           line-height: 2.8rem;
+//           max-width: 90%;
+//         }
+//       }
+//     }
 
-        &__text {
-          font-size: 18px;
-          line-height: 2.8rem;
-          max-width: 90%;
-        }
-      }
-    }
+//     &__bottom {
+//       &__backgroundColor {
+//         padding: 80px 0px 100px 0px;
 
-    &__bottom {
-      &__backgroundColor {
-        padding: 80px 0px 100px 0px;
-
-        &__content {
-          padding: 0 1.6rem;
-        }
-      }
-    }
-  }
-}
+//         &__content {
+//           padding: 0 1.6rem;
+//         }
+//       }
+//     }
+//   }
+// }

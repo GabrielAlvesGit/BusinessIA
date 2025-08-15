@@ -51,6 +51,8 @@
             font-weight: variables.$font-semi-bold-gold;
             line-height: 20px;
             text-decoration: double;
+            padding: 0;
+            margin: 0;
 
             &__link {
               color: variables.$text-color;

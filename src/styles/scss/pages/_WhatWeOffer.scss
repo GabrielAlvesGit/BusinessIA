@@ -7,16 +7,18 @@
   >.container {
     display: flex;
     flex-direction: column;
-    gap: 90px;
+    gap: 70px;
   }
 
   &__title {
     text-align: center;
     color: variables.$primary-color-black;
     font-size: 1.875rem;
+    padding: 0;
+    margin: 0;
 
     strong {
-      background: repeating-linear-gradient(90deg, #cf0c13, #ff0a95 50%, #ff5724);
+      background: repeating-linear-gradient(90deg, #ffbf00, #ffbf00 50%, #ff5724);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -35,7 +37,7 @@
       flex-direction: column;
       gap: 1px;
       width: 20%;
-          justify-content: space-between;
+      justify-content: space-between;
 
       &__option {
         cursor: pointer;
@@ -44,6 +46,8 @@
         &__title {
           font-size: 24px;
           font-weight: bold;
+          padding: 0;
+          margin: 0;
         }
 
         &--active {
@@ -92,6 +96,8 @@
         &__range {
           font-size: 16px;
           line-height: 1.75rem;
+          padding: 0;
+          margin: 0;
         }
       }
     }
@@ -141,6 +147,7 @@
             font-weight: bold;
             font-size: 0.875rem;
             background: variables.$primary-color-gray;
+            margin: 0;
 
             &--green {
               background: variables.$primary-color-WhatsApp;
@@ -166,6 +173,8 @@
               &__text {
                 font-size: 1rem;
                 color: variables.$text-color;
+                padding: 0;
+                margin: 0;
               }
             }
           }
@@ -176,7 +185,8 @@
               font-size: 1rem;
               color: variables.$text-color;
               font-weight: 800;
-              margin-top: 12px;
+              margin-bottom: 12px;
+              padding: 0;
             }
 
             &__list {
@@ -202,6 +212,7 @@
               text-align: center;
 
               &--primary {
+
                 &--green {
                   border: 1px solid variables.$primary-color-black;
                   color: variables.$text-color;
@@ -215,6 +226,7 @@
               }
 
               &--secondary {
+                
                 &--green {
                   background-color: variables.$primary-color-WhatsApp;
                   color: variables.$primary-color-white;

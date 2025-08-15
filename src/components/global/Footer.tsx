@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
                     </article>
 
                     <div className="footer__bottom__copy">
-                        <p className="footer__bottom__copy__text">Cospanyright © 2025 - <span>B</span>usiness<span>I.A</span></p>    
+                        <p className="footer__bottom__copy__text">Cospanyright © 2025 - Business.<span>IA</span></p>    
                     </div>
                 </div>
             </div>
