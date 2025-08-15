@@ -57,17 +57,30 @@ const Footer: React.FC = () => {
                     <div className="footer__top__navigation">
                         <ul className="footer__top__navigation__left">
                             <h4 className="footer__top__navigation__left__title">Empresa</h4>
-                            <li className="footer__top__navigation__left__link"><Link to="/sobre">Lorem</Link></li>
-                            <li className="footer__top__navigation__left__link"><Link to="/sobre">Lorem</Link></li>
-                            <li className="footer__top__navigation__left__link"><Link to="/sobre">Lorem</Link></li>
+                            <li className="footer__top__navigation__left__item"><Link className="footer__top__navigation__left__item__link" to="/sobre">Lorem</Link></li>
+                            <li className="footer__top__navigation__left__item"><Link className="footer__top__navigation__left__item__link" to="/sobre">Lorem</Link></li>
+                            <li className="footer__top__navigation__left__item"><Link className="footer__top__navigation__left__item__link" to="/sobre">Lorem</Link></li>
                         </ul>
 
                         <ul className="footer__top__navigation__right">
                             <h4 className="footer__top__navigation__right__title">Empresa</h4>
-                            <li className="footer__top__navigation__right__link"><Link to="/sobre">Lorem</Link></li>
-                            <li className="footer__top__navigation__right__link"><Link to="/sobre">Lorem</Link></li>
-                            <li className="footer__top__navigation__right__link"><Link to="/sobre">Lorem</Link></li>
+                            <li className="footer__top__navigation__right__item"><Link className="footer__top__navigation__right__item__link" to="/sobre">Lorem</Link></li>
+                            <li className="footer__top__navigation__right__item"><Link className="footer__top__navigation__right__item__link" to="/sobre">Lorem</Link></li>
+                            <li className="footer__top__navigation__right__item"><Link className="footer__top__navigation__right__item__link" to="/sobre">Lorem</Link></li>
                         </ul>
+                    </div>
+                </div>
+
+                <div className="footer__bottom">
+                    <article className="footer__bottom__socialMedia">
+                        <ul className="footer__bottom__socialMedia__list">
+                            <li className="footer__bottom__socialMedia__list__item"><Link className="footer__bottom__socialMedia__list__item__link" to=""><i className="bx bxl-instagram-alt isInstagram"></i></Link></li>
+                            <li className="footer__bottom__socialMedia__list__item"><Link className="footer__bottom__socialMedia__list__item__link" to=""><i className="bx bxl-linkedin-square isLinkedIn"></i></Link></li>
+                        </ul>
+                    </article>
+
+                    <div className="footer__bottom__copy">
+                        <p className="footer__bottom__copy__text">Cospanyright © 2025 - <span>B</span>usiness<span>I.A</span></p>    
                     </div>
                 </div>
             </div>
