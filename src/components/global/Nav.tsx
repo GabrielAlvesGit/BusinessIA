@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import  { Link } from 'react-router-dom';
 
-import logoBusinessIA from '/src/assets/icons/logoBusinessIA.png';
+import logoBusinessIA from '../../assets/icons/logoBusinessIA.png';
 
 const Nav: React.FC = () => {
 
