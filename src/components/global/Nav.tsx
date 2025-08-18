@@ -77,9 +77,9 @@ const Nav: React.FC = () => {
                 {/* <i className="uil uil-times nav__close" onClick={() => showMenu(!Toggle)}></i> */}
             </div>
 
-            <div className="nav__toggle" >
-                <i className='bx bx-menu' onClick={toggleMenu}></i>
-                <i className="uil uil-times nav__close"></i>
+            <div className={`nav__toggle ${isMenuOpen ? 'nav__toggle--active' : ''}`}>
+                <i className={`bx bx-menu ${isMenuOpen ? 'bx-menu--active' : ''}`} onClick={toggleMenu}></i>
+                <i className={`uil uil-times ${isMenuOpen ? '' : 'uil-times--active'}`} onClick={toggleMenu}></i>
                 <img className="" src={logoBusinessIA}  alt="BusinessIA" />
             </div>
         </nav>

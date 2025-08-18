@@ -44,8 +44,6 @@
           &__link {
             display: flex;
             gap: 15px;
-
-
           }
 
           &:nth-child(2) &__link,
@@ -104,13 +102,16 @@
           top: 91px;
           left: 70%;
           right: 0;
+          font-size: 30px;
           background: variables.$primary-color-yellow;
           border-radius: 9999px;
           cursor: pointer;
-          color: black;
+          color: variables.$primary-color-black;
 
-          &.active {
-            position: fixed;
+          &--active {
+            position: absolute !important;
+            top: 85px !important;
+            right: 24px !important;
           }
           
           img {
@@ -118,9 +119,9 @@
           }
 
           .bx-menu, 
-          .nav__close {
-            display: none;
-          }
+           .uil-times {
+                display: none;
+            }
         }
       }
     }
@@ -153,9 +154,11 @@
           padding: 64px;
           overflow-y: auto;
           scrollbar-width: thin;
-
+          transition: all .8s ease;
+          
           &.active {
-            left: 0;
+            right: 0;
+            transition: all .4s ease;
           }
           
           &__logo {
@@ -191,19 +194,16 @@
                   justify-content: space-between;
                   padding: 0;
 
-                  &::after {
-                    background: url("data:image/svg+xml,%3csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10.6865 11.5769L14.5199 7.74358L15.1096 8.33333L10.6865 12.7564L8.47498 10.5449L6.26344 8.33333L6.85319 7.74358L10.6865 11.5769Z' fill='%23fff'/%3e%3c/svg%3e") no-repeat center center;
-                  }
+                   &:nth-child(1) :nth-last-child(1)  {
+                        &::after {
+                            right: initial;
+                            left: 91px;
+                            top: 28px;
+                            background: url('../../../assets/icons/bx-chevron-down-light.png') no-repeat center center;
+                        }
+                    }
                 }
-
-                &:hover {
-                  .submenu {
-                    height: calc(100vh - 48px);
-                    visibility: visible;
-                    overflow-y: hidden;
-                  }
-                }
-
+                
                 .submenu {
                   display: block;
                   position: initial;
@@ -213,6 +213,13 @@
                   transition: 0.6s;
                   z-index: 1000;
                   padding: 0;
+
+                  &--active{
+                      height: calc(84vh - 48px);
+                      visibility: visible;
+                      overflow-y: hidden;
+                      opacity: 1;
+                  }
 
                   .container {
                     width: 100%;
@@ -233,13 +240,17 @@
                       flex-direction: column;
 
                       &__item {
-                        width: 100%;
+                          width: 100%;
 
                         &__link {
                           color: variables.$primary-color-white;
                           padding-bottom: 15px;
                           margin-bottom: 15px;
                           border-bottom: 2px solid variables.$primary-color-yellow;
+                          
+                          &:hover {
+                            color: variables.$primary-color-yellow;
+                          }
                         }
                       }
                     }
@@ -250,11 +261,26 @@
           }
 
           &__toggle {
-            right: -9px;
-            top: 71px;
+            top: 41px;
+            right: 35px;
             left: initial;
-            width: 64px;
-            height: 64px;
+            width: 89.16px;
+            height: 89.16px;
+            position: fixed;
+
+            .bx-menu {
+              &--active {
+                display: none !important;
+             }
+            }
+
+            .uil-times {
+                display: flex;
+
+              &--active {
+                display: none;
+             }
+            }
 
             img {
               display: none;
@@ -263,15 +289,17 @@
             .bx-menu {
               display: flex;
 
-
               &.active {
                 display: none;
               }
             }
-            
           }
         }
       }
     }
   }
+}
+
+@media (max-width: 1200px) {
+
 }
