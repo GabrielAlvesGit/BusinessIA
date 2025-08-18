@@ -78,8 +78,8 @@ const Nav: React.FC = () => {
             </div>
 
             <div className={`nav__toggle ${isMenuOpen ? 'nav__toggle--active' : ''}`}>
-                <i className={`bx bx-menu ${isMenuOpen ? 'bx-menu--active' : ''}`} onClick={toggleMenu}></i>
                 <i className={`uil uil-times ${isMenuOpen ? '' : 'uil-times--active'}`} onClick={toggleMenu}></i>
+                <i className={`bx bx-menu ${isMenuOpen ? 'bx-menu--active' : ''}`} onClick={toggleMenu}></i>
                 <img className="" src={logoBusinessIA}  alt="BusinessIA" />
             </div>
         </nav>

@@ -134,49 +134,29 @@
   }
 }
 
-// @media only screen and (max-width: 1024px) {
-//   .WhoWeAre {
-//     &__bottom {
-//       &__backgroundColor {
-//         &__content {
-//           padding: 0 18.6rem;
-//         }
-//       }
-//     }
-//   }
-// }
+/*============================== Responsividade ==============================*/
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media only screen and (max-width: 1024px) {
+ .WhoWeAre {
 
-// @media only screen and (max-width: 768px) {
-//   .WhoWeAre {
-//     &__top {
-//       height: 500px;
-//       padding: 80px 0px 100px 0px;
+    &__top {
+    
+      &__backgroundImage {
+      
+        > .container {
+          transform: translate(-50%, 20%);
+        }
 
-//       &__backgroundImage {
-//         > .container {
-//           gap: 30px;
-//         }
+        &__title {
+          padding: 0;
+          margin: 0;
+        }
 
-//         &__title {
-//           font-size: 28px;
-//         }
-
-//         &__text {
-//           font-size: 18px;
-//           line-height: 2.8rem;
-//           max-width: 90%;
-//         }
-//       }
-//     }
-
-//     &__bottom {
-//       &__backgroundColor {
-//         padding: 80px 0px 100px 0px;
-
-//         &__content {
-//           padding: 0 1.6rem;
-//         }
-//       }
-//     }
-//   }
-// }
+        &__text {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
