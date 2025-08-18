@@ -321,3 +321,33 @@
       }
     }
 }
+
+/*============================== Responsividade ==============================*/
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media only screen and (max-width: 1024px) {
+  .footer {
+   
+    &__top {
+      flex-direction: column;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 33px;
+
+      &__left {
+      }
+
+      &__right {
+
+        &__accordion {
+          width: 100%;
+
+          &__content {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
