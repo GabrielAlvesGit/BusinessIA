@@ -117,7 +117,10 @@
   }
 }
 
-@media (max-width: 468px) {
+/*============================== Responsividade ==============================*/
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media only screen and (max-width: 1024px) {
   .auth {
     grid-template-columns: 1fr;
 
@@ -163,7 +166,7 @@
   }
 }
 
-@media (max-width: 767px) and (min-width: 469px) {
+@media (max-width: 767px) and (min-width: variables) {
   .auth-entry {
     grid-template-columns: 1fr;
 
