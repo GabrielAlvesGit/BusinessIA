@@ -20,12 +20,7 @@ const Nav: React.FC = () => {
     };
   
     return (
-        <nav className={`nav container ${isMenuOpen ? 'active' : ''}`}>
-            <article className="nav__logo">
-                <Link to="/" className="nav__logo__link">BusinessIA</Link>
-                <img className="nav__logo__img" src={logoBusinessIA} alt="BusinessIA" />
-            </article>
-
+        <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
             <div className="nav__menu">
                 <ul className="nav__menu__list">
                     <li className="nav__menu__list__item">

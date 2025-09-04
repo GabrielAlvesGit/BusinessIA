@@ -113,15 +113,15 @@
             top: 85px !important;
             right: 24px !important;
           }
-          
+
           img {
             display: initial;
           }
 
-          .bx-menu, 
-           .uil-times {
-                display: none;
-            }
+          .bx-menu,
+          .uil-times {
+            display: none;
+          }
         }
       }
     }
@@ -134,174 +134,53 @@
 @media (max-width: 1200px) {
   .banner {
     &__left {
-    width: 490px;
+      width: 490px;
       position: absolute;
       right: 0;
       top: -127px;
       bottom: 0;
       object-fit: cover;
       overflow: hidden;
-      z-index: 10;
+      z-index: 9;
 
       &__img {
         position: relative;
 
-        .nav {
-          position: absolute;
-          background-color: variables.$primary-color-black;
-          flex-direction: row-reverse;
-          align-items: flex-start;
-          justify-content: flex-end;
-          height: 100%;
-          padding: 64px;
-          overflow-y: auto;
-          scrollbar-width: thin;
-          transition: all .8s ease;
-          
-          &.active {
-            right: 0;
-            transition: all .4s ease;
-          }
-          
-          &__logo {
-            display: none;
+        // &__toggle {
+        //   top: 41px;
+        //   right: 35px;
+        //   left: initial;
+        //   width: 89.16px;
+        //   height: 89.16px;
+        //   position: fixed;
 
-            &__link {
-              display: none;
-            }
+        //   .bx-menu {
+        //     &--active {
+        //       display: none !important;
+        //    }
+        //   }
 
-            &__img {
-              display: flex;
-              max-width: 100%;
-              height: auto;
-            }
-          }
+        //   .uil-times {
+        //       display: flex;
 
-          &__menu {
-            display: flex;
-            width: 90%;
+        //     &--active {
+        //       display: none;
+        //    }
+        //   }
 
-            &__list {
-              width: 100%;
-              flex-direction: column;
-              align-items: start;
-              gap: 0;
+        //   img {
+        //     display: none;
+        //   }
 
-              &__item {
-                width: 100%;
+        //   .bx-menu {
+        //     display: flex;
 
-                &__link {
-                  position: relative;
-                  color: variables.$primary-color-white;
-                  justify-content: space-between;
-                  padding: 0;
-
-                   &:nth-child(1) :nth-last-child(1)  {
-                        &::after {
-                            right: initial;
-                            left: 91px;
-                            top: 28px;
-                            background: url('../../../assets/icons/bx-chevron-down-light.png') no-repeat center center;
-                        }
-                    }
-                }
-                
-                .submenu {
-                  display: block;
-                  position: initial;
-                  width: 100%;
-                  background: transparent;
-                  height: 0px;
-                  transition: 0.6s;
-                  z-index: 1000;
-                  padding: 0;
-
-                  &--active{
-                      height: calc(84vh - 48px);
-                      visibility: visible;
-                      overflow-y: hidden;
-                      opacity: 1;
-                  }
-
-                  .container {
-                    width: 100%;
-                    padding-right: 0;
-                    padding-left: 0;
-                    margin-right: 0;
-                    margin-left: 0;
-                  }
-
-                  &__list {
-
-                    &__left {
-                      display: none;
-                    }
-
-                    &__right {
-                      flex-wrap: nowrap;
-                      flex-direction: column;
-
-                      &__item {
-                          width: 100%;
-
-                        &__link {
-                          color: variables.$primary-color-white;
-                          padding-bottom: 15px;
-                          margin-bottom: 15px;
-                          border-bottom: 2px solid variables.$primary-color-yellow;
-                          
-                          &:hover {
-                            color: variables.$primary-color-yellow;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-
-          &__toggle {
-            top: 41px;
-            right: 35px;
-            left: initial;
-            width: 89.16px;
-            height: 89.16px;
-            position: fixed;
-
-            .bx-menu {
-              &--active {
-                display: none !important;
-             }
-            }
-
-            .uil-times {
-                display: flex;
-
-              &--active {
-                display: none;
-             }
-            }
-
-            img {
-              display: none;
-            }
-
-            .bx-menu {
-              display: flex;
-
-              &.active {
-                display: none;
-              }
-            }
-          }
-        }
+        //     &.active {
+        //       display: none;
+        //     }
+        //   }
+        // }
       }
     }
   }
-}
-
-@media (max-width: 1200px) {
-
 }

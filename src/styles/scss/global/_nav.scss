@@ -1,182 +1,319 @@
   @use '../base/variables';
-@use '../base/grid';
+  @use '../base/grid';
 
   .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    &__logo {
-        
-        transition: .45s all;
+      gap: 50px;
+      display: flex;
+      align-items: center;
 
-        &__link {
-            display: block;
-            font-size: 16px;
-            font-weight: 600;
-            color: variables.$primary-color-black;
-        }
+      &__logo {
 
-        &__img {
-            display: none;
-            max-width: 100%;
-            height: auto;
-        }
+          transition: .45s all;
 
-        &:hover {
-            opacity: 0.8;
-            transition: .35s all;
-        }
-    }
+          &__link {
+              display: block;
+              font-size: 16px;
+              font-weight: 600;
+              color: variables.$primary-color-black;
+          }
 
-    &__menu {
+          &__img {
+              display: none;
+              max-width: 100%;
+              height: auto;
+          }
 
-        &__list {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-            
-            &__item {
-                
-                &__link {
-                    display: flex;
-                    align-items: center;
-                    position: relative;
-                    min-height: 77px;
-                    padding: 15px 21px 15px 0 ;
-                    font-size: 12px;
-                    color: variables.$text-color;
-                    font-weight: 400;
-                    line-height: 16px;
-                    text-decoration: none;
+          &:hover {
+              opacity: 0.8;
+              transition: .35s all;
+          }
+      }
 
-                      &:nth-child(1) :nth-last-child(1)  {
-                        &::after {
-                            content: '';
-                            display: block;
-                            position: absolute;
-                            right: 0;
-                            top: 28px;
-                            width: 21px;
-                            height: 21px;
-                            background: url('../../../assets/icons/bx-chevron-down.svg') no-repeat center center;
-                            transition: width 0.3s ease-in-out;
-                        }
+      &__menu {
 
-                        &.active {
-                            &::after { 
-                                transform: rotate(-180deg);
-                                transition: all 0.3s ease;
-                            }
-                        }
-                    }
-                }
-               
-                .submenu {
-                    background: variables.$body-color;
-                    left: 0;
-                    padding: 40px 0;
-                    position: absolute;
-                    top: 100%;
-                    width: 100%;
-                    opacity: 0;
-                    pointer-events: none;
-                    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-                    
-                     &--active {
-                        pointer-events: visible;
-                        opacity: 1;
-                }
+          &__list {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: 20px;
 
-                    &__list {
-                        display: flex;
-                        gap: 35px;
+              &__item {
 
-                        &__left {
-                            display: flex;
+                  &__link {
+                      display: flex;
+                      align-items: center;
+                      position: relative;
+                      min-height: 77px;
+                      padding: 15px 21px 15px 0;
+                      font-size: 12px;
+                      color: variables.$text-color;
+                      font-weight: 400;
+                      line-height: 16px;
+                      text-decoration: none;
 
-                            &__title {
-                                color: variables.$primary-color-black;
-                                font-size: 24px;
-                                font-weight:  600;
-                                letter-spacing: -.2px;
-                                line-height: 150%;
-                                margin-top: 55%;
-                            }
-                        }
+                      &:nth-child(1) :nth-last-child(1) {
+                          &::after {
+                              content: '';
+                              display: block;
+                              position: absolute;
+                              right: 0;
+                              top: 28px;
+                              width: 21px;
+                              height: 21px;
+                              background: url('../../../assets/icons/bx-chevron-down.svg') no-repeat center center;
+                              transition: width 0.3s ease-in-out;
+                          }
 
-                        &__right {
-                            display: flex;
-                            flex-wrap: wrap;
-                            gap: 40px;
+                          &.active {
+                              &::after {
+                                  transform: rotate(-180deg);
+                                  transition: all 0.3s ease;
+                              }
+                          }
+                      }
+                  }
 
-                            &__item {
-                                width: 47%;
+                  .submenu {
+                      background: variables.$body-color;
+                      left: 0;
+                      padding: 40px 0;
+                      position: absolute;
+                      top: 100%;
+                      width: 100%;
+                      opacity: 0;
+                      pointer-events: none;
+                      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
-                                &__link {
-                                    display: block;
-                                    color: variables.$primary-color-black;
-                                    font-size: 16px;
-                                    font-weight: variables.$font-semi-bold-gold;
-                                    letter-spacing: -.2px;
-                                    line-height: 19px;
-                                    padding-bottom: 6px;
-                                    text-decoration: none;
-                                    transition: 0.45s all;
-                                    border-bottom: 2px solid transparent;
-                                    
-                                    &:hover {
-                                        opacity: .8;
-                                        transition: 0.35s all;
-                                        border-bottom: 2px solid transparent;
-                                    }
-                                }
+                      &--active {
+                          pointer-events: visible;
+                          opacity: 1;
+                      }
 
-                                &__text {
-                                    color: variables.$text-color;
-                                    font-size: 12px;
-                                    font-weight: variables.$font-normal;
-                                    letter-spacing: .12px;
-                                    line-height: 150%;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+                      &__list {
+                          display: flex;
+                          gap: 35px;
 
-    &__toggle {
-      
-        img {
-            display: none;
-        }
-    }
-}
+                          &__left {
+                              display: flex;
 
-@media (max-width: 1200px) {       
-    .nav {
+                              &__title {
+                                  color: variables.$primary-color-black;
+                                  font-size: 24px;
+                                  font-weight: 600;
+                                  letter-spacing: -.2px;
+                                  line-height: 150%;
+                                  margin-top: 55%;
+                              }
+                          }
 
-        &__logo {
-            width: 50px;
-            height: 50px;
+                          &__right {
+                              display: flex;
+                              flex-wrap: wrap;
+                              gap: 40px;
 
-            &__link {
-                display: none;
-            }
+                              &__item {
+                                  width: 47%;
 
-            &__img {
-                display: flex;
-                max-width: 100%;
-                height: auto;
-            }
-        }
+                                  &__link {
+                                      display: block;
+                                      color: variables.$primary-color-black;
+                                      font-size: 16px;
+                                      font-weight: variables.$font-semi-bold-gold;
+                                      letter-spacing: -.2px;
+                                      line-height: 19px;
+                                      padding-bottom: 6px;
+                                      text-decoration: none;
+                                      transition: 0.45s all;
+                                      border-bottom: 2px solid transparent;
 
-        &__menu,
-        &__toggle  {
-            display: none;
-        }
-    }
-}
+                                      &:hover {
+                                          opacity: .8;
+                                          transition: 0.35s all;
+                                          border-bottom: 2px solid transparent;
+                                      }
+                                  }
+
+                                  &__text {
+                                      color: variables.$text-color;
+                                      font-size: 12px;
+                                      font-weight: variables.$font-normal;
+                                      letter-spacing: .12px;
+                                      line-height: 150%;
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+
+      &__toggle {
+
+          img {
+              display: none;
+          }
+      }
+  }
+
+  @media (max-width: 1200px) {
+      .nav {
+          position: fixed;
+          right: -999px;
+          top: 0;
+          bottom: 0;
+          object-fit: cover;
+          overflow: hidden;
+          z-index: 10;
+          background-color: variables.$primary-color-black;
+          flex-direction: row-reverse;
+          align-items: flex-start;
+          justify-content: flex-end;
+          height: 100%;
+          width: 50%;
+          padding: 64px;
+          overflow-y: auto;
+          scrollbar-width: thin;
+          transition: all .8s ease;
+          z-index: 9999;
+
+          &.active {
+              right: 0;
+              transition: all .4s ease;
+          }
+
+          &__logo {
+              display: none;
+
+              &__link {
+                  display: none;
+              }
+
+              &__img {
+                  display: flex;
+                  max-width: 100%;
+                  height: auto;
+              }
+          }
+
+          &__menu {
+              display: flex;
+              width: 90%;
+
+              &__list {
+                  width: 100%;
+                  flex-direction: column;
+                  align-items: start;
+                  gap: 0;
+
+                  &__item {
+                      width: 100%;
+
+                      &__link {
+                          position: relative;
+                          color: variables.$primary-color-white;
+                          justify-content: space-between;
+                          padding: 0;
+
+                          &:nth-child(1) :nth-last-child(1) {
+                              &::after {
+                                  right: initial;
+                                  left: 91px;
+                                  top: 28px;
+                                  background: url('../../../assets/icons/bx-chevron-down-light.png') no-repeat center center;
+                              }
+                          }
+                      }
+
+                      .submenu {
+                          display: block;
+                          position: initial;
+                          width: 100%;
+                          background: transparent;
+                          height: 0px;
+                          transition: 0.6s;
+                          z-index: 1000;
+                          padding: 0;
+
+                          &--active {
+                              height: calc(84vh - 48px);
+                              visibility: visible;
+                              overflow-y: hidden;
+                              opacity: 1;
+                          }
+
+                          .container {
+                              width: 100%;
+                              padding-right: 0;
+                              padding-left: 0;
+                              margin-right: 0;
+                              margin-left: 0;
+                          }
+
+                          &__list {
+
+                              &__left {
+                                  display: none;
+                              }
+
+                              &__right {
+                                  flex-wrap: nowrap;
+                                  flex-direction: column;
+
+                                  &__item {
+                                      width: 100%;
+
+                                      &__link {
+                                          color: variables.$primary-color-white;
+                                          padding-bottom: 15px;
+                                          margin-bottom: 15px;
+                                          border-bottom: 2px solid variables.$primary-color-yellow;
+
+                                          &:hover {
+                                              color: variables.$primary-color-yellow;
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+
+          &__toggle {
+              top: 41px;
+              right: 35px;
+              left: initial;
+              width: 89.16px;
+              height: 89.16px;
+              position: fixed;
+
+              .bx-menu {
+                  &--active {
+                      display: none !important;
+                  }
+              }
+
+              .uil-times {
+                  display: flex;
+
+                  &--active {
+                      display: none;
+                  }
+              }
+
+              img {
+                  display: none;
+              }
+
+              .bx-menu {
+                  display: flex;
+
+                  &.active {
+                      display: none;
+                  }
+              }
+          }
+      }
+  }

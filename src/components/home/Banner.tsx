@@ -10,7 +10,6 @@ const Banner: React.FC = () => {
             <div className="container">
                 <div className='banner__content__top'>
                     <h1 className="banner__content__top__title">Business Manager</h1>
-                    <h1 className="text-3xl bg-red-600 text-red-600 font-bold underline">Tailwind - teste</h1>
                 </div>
 
                 <div className="banner__content__bottom">
@@ -50,7 +49,7 @@ const Banner: React.FC = () => {
 
             <div className="banner__left">
                 <div className="banner__left__img">
-                        < Nav />
+                        {/* < Nav /> */}
                 </div>
             </div>
         </div>

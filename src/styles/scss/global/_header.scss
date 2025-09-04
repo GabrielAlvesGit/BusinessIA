@@ -1,5 +1,5 @@
-@use '../base/variables' ;
-@use '../base/grid' ;
+@use '../base/variables';
+@use '../base/grid';
 
 .header {
     width: 100%;
@@ -7,18 +7,105 @@
     background-color: variables.$primary-color-white;
     top: 0;
     left: 0;
-    z-index: variables.$z-tooltip; 
+    z-index: variables.$z-tooltip;
     box-shadow: variables.$boxShadow-header;
     transition: 0.45s all;
     cursor: pointer;
 
+    .container {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+    }
+
     &:hover {
         transition: 0.35s all;
     }
+
+    &__logo {
+
+        transition: .45s all;
+
+        &__link {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            color: variables.$primary-color-black;
+        }
+
+        &__img {
+            display: none;
+            max-width: 100%;
+            height: auto;
+        }
+
+        &:hover {
+            opacity: 0.8;
+            transition: .35s all;
+        }
+    }
+
+
+    .nav {
+
+        &__toggle {
+            display: none;
+            align-items: center;
+        }
+    }
 }
 
+/*============================== Responsividade ==============================*/
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
 @media (max-width: 1200px) {
     .header {
         padding: 15px 0;
+
+        .container {
+            justify-content: space-between;
+        }
+
+        &__logo {
+            width: 50px;
+            height: 50px;
+
+            &__link {
+                display: none;
+            }
+
+            &__img {
+                display: flex;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+
+        .nav {
+
+
+            &__toggle {
+                position: fixed;
+                display: flex;
+                align-items: center;
+                right: 0;
+                top: 0;
+
+                .bx-menu {
+                    &--active {
+                        display: none !important;
+                    }
+                }
+
+                .uil-times {
+                    display: flex;
+
+                    &--active {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 }
