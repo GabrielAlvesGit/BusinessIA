@@ -3,13 +3,17 @@ import WhatsApp from "../../../src/assets/images/whatsapp.jpg";
 
 export const whatWeOfferData = [
   {
-    name: 'Plataforma 1',
-    description: 'Lorem',
+  name: 'WhatsApp',
+    description: 'Conectando WhatsApp com sua plataforma',
     color: 'green',
     active: 'activeBottom',
-    benefits: ['Lorem', 'Lorem'],
+    benefits: ['Aumente o engajamento com clientes', 'Automatize respostas rápidas'],
     titleDifferential: 'Qual é o diferencial?',
-    differentials: ['Lorem', 'Lorem', 'lorem'],
+    differentials: [
+      'Integração seamless com sua plataforma',
+      'Suporte a mensagens personalizadas',
+      'Análise de dados em tempo real',
+    ],
     image: WhatsApp,
   },
   {

@@ -32,6 +32,7 @@
     box-shadow: variables.$boxShadow-header;
     border-radius: 0.625rem;
     overflow: hidden;
+    height: 620px;
 
     &__left {
       display: flex;
@@ -42,7 +43,7 @@
 
       &__option {
         cursor: pointer;
-        padding: 1px 0;
+        padding: 0;
 
         &__title {
           font-size: 24px;
@@ -244,7 +245,7 @@
         }
 
         &__image {
-          width: 20rem;
+          width: 27rem;
           height: 100%;
           overflow: hidden;
           border-radius: 0.75rem;
@@ -271,6 +272,8 @@
     &__bottom {
       display: flex;
       flex-direction: column;
+      height: 100%;
+
       
       &__left {
         width: 100%;
@@ -422,13 +425,13 @@
       &__left {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 0;
 
         &__option {
-            width: 50%;
+            width: 49.9%;
 
           &__inner {
             border-radius: 0;
+            height: 100%;
           }
 
           &:nth-child(1) {
@@ -436,11 +439,11 @@
           }
 
           &:nth-child(2) {
-            order: 2;
+            order: 1;
           }
 
            &:nth-child(3) {
-            order: 1;
+            order: 2;
           }
 
            &:nth-child(4) {
