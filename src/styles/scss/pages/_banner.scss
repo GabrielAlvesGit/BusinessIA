@@ -83,46 +83,12 @@
       background-position: right;
       background-size: contain;
 
-      .nav {
-        right: -999px;
-
-        &__logo,
-        &__menu {
-          display: none;
-        }
-
-        &__toggle {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 90px;
-          height: 90px;
-          position: absolute;
-          transform: translateX(-50%);
-          top: 91px;
-          left: 70%;
-          right: 0;
-          font-size: 30px;
-          background: variables.$primary-color-yellow;
-          border-radius: 9999px;
-          cursor: pointer;
-          color: variables.$primary-color-black;
-
-          &--active {
-            position: absolute !important;
-            top: 85px !important;
-            right: 24px !important;
-          }
-
-          img {
-            display: initial;
-          }
-
-          .bx-menu,
-          .uil-times {
-            display: none;
-          }
-        }
+      img {
+        position: absolute;
+        top: 41px;
+        right: 76px;
+        width: 132.16px;
+        height: 110.16px;
       }
     }
   }
@@ -145,6 +111,10 @@
 
       &__img {
         position: relative;
+
+        img {
+          display: none;
+        }
 
         // &__toggle {
         //   top: 41px;

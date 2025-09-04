@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from '../global/Nav';
 import  { Link } from 'react-router-dom';
+import logoBusinessIA from '../../assets/icons/logoBusinessIA.png';
 
 const Banner: React.FC = () => {
     
@@ -50,6 +51,7 @@ const Banner: React.FC = () => {
             <div className="banner__left">
                 <div className="banner__left__img">
                         {/* < Nav /> */}
+                        <img className="" src={logoBusinessIA}  alt="BusinessIA" />
                 </div>
             </div>
         </div>
