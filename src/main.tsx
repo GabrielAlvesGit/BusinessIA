@@ -9,7 +9,8 @@ import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import Home from "./page-template/Home/Home.tsx"
 import Login from "./page-template/Login/AuthPage.tsx"
 import Dashboard from "./page-template/Dashboard/Dashboard.tsx"
-import Employees from "./page-template/Employees/employees.tsx"
+import Employees from "./page-template/Employees/Employees.tsx"
+import FinancialReports from "./page-template/FinancialReports/FinancialReports.tsx"
 
 import WhatWeOffer from "./components/whatweoffer/WhatWeOffer.tsx"
 import Erro from "./page-template/erro/Erro.tsx"
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
       {
         path: "employees",
         element: <Employees />,
+      },
+      {
+        path: "financialReports",
+        element: <FinancialReports />,
       },
        // 5 - nested routes - identificador único - dynamic routes
       {
