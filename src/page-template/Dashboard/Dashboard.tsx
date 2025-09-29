@@ -73,10 +73,14 @@ const Dashboard: React.FC = () => {
                                 <th scope="row">Corte + Barba - João Silva <br /> Por: Carlos (Barbeiro)</th>
                                 <th scope="row">R$ 35,00 <br /> 14:30</th>
                             </tr>
+                            <tr>
+                                <th scope="row">Corte + Barba - João Silva <br /> Por: Carlos (Barbeiro)</th>
+                                <th scope="row">R$ 35,00 <br /> 14:30</th>
+                            </tr>
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th scope="row">Lorem</th>
+                                <th scope="row">Relatório Business.iA</th>
                             </tr>
                         </tfoot>
                     </table>
