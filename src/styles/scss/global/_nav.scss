@@ -158,7 +158,26 @@
 
   @media (max-width: 1200px) {
       .nav {
-          position: fixed;
+      
+
+      
+
+          &__logo {
+              display: none;
+
+              &__link {
+                  display: none;
+              }
+
+              &__img {
+                  display: flex;
+                  max-width: 100%;
+                  height: auto;
+              }
+          }
+
+          &__menu {
+                  position: fixed;
           right: -999px;
           top: 0;
           bottom: 0;
@@ -177,29 +196,11 @@
           transition: all .8s ease;
           z-index: 9999;
 
-          &.active {
+              &.active {
               right: 0;
               transition: all .4s ease;
           }
-
-          &__logo {
-              display: none;
-
-              &__link {
-                  display: none;
-              }
-
-              &__img {
-                  display: flex;
-                  max-width: 100%;
-                  height: auto;
-              }
-          }
-
-          &__menu {
-              display: flex;
-              width: 90%;
-
+          
               &__list {
                   width: 100%;
                   flex-direction: column;

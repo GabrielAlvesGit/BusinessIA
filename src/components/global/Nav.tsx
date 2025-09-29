@@ -20,8 +20,8 @@ const Nav: React.FC = () => {
     };
   
     return (
-        <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
-            <div className="nav__menu">
+        <nav className="nav">
+            <div className={`nav__menu ${isMenuOpen ? 'active' : ''}`}>
                 <ul className="nav__menu__list">
                     <li className="nav__menu__list__item">
                         <Link  className="nav__menu__list__item__link" onClick={toggleAnswer} to="/">
