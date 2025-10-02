@@ -126,6 +126,7 @@ const AuthPage: React.FC = () => {
               </div>
             </div>
 
+            {/* <div className="auth__right__footer"><img className="auth__right__footer__logo" alt="BusinessIA" src="/src/assets/icons/logoBusinessIA.png"></img></div> */}
             <div className="auth__right__footer">
               <div className="auth__right__footer__links">
                 <a href="#" className="auth__right__footer__links__item">Termos de uso</a>
