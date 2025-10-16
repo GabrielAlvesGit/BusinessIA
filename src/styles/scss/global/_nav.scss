@@ -87,6 +87,7 @@
                       &--active {
                           pointer-events: visible;
                           opacity: 1;
+                          cursor: initial;
                       }
 
                       &__list {
@@ -114,7 +115,15 @@
                               &__item {
                                   width: 47%;
 
-                                  &__link {
+                                  &--box{
+                                    background-color: variables.$primary-color-black;
+                                    padding: 1rem 1.5rem;
+                                    border-radius: 0.375rem;
+                                    font-weight: 600;
+                                    line-height: 1.25rem;
+                                  }
+
+                                  &__link, strong {
                                       display: block;
                                       color: variables.$primary-color-black;
                                       font-size: 16px;
@@ -125,11 +134,23 @@
                                       text-decoration: none;
                                       transition: 0.45s all;
                                       border-bottom: 2px solid transparent;
+                                      cursor: initial;
 
-                                      &:hover {
-                                          opacity: .8;
-                                          transition: 0.35s all;
-                                          border-bottom: 2px solid transparent;
+                                      &--acesso {
+                                        cursor: pointer;
+                                        color: variables.$primary-color-white;
+                                        
+                                        div .submenu__list__right__item__text{
+                                            padding: 0;
+                                            margin: 0;
+                                            color: variables.$primary-color-yellow;
+                                        }
+                                   
+                                        &:hover {
+                                            opacity: .8;
+                                            transition: 0.35s all;
+                                            border-bottom: 2px solid transparent;
+                                        }
                                       }
                                   }
 
@@ -219,7 +240,7 @@
                           &:nth-child(1) :nth-last-child(1) {
                               &::after {
                                   right: initial;
-                                  left: 91px;
+                                  left: 137px;
                                   top: 28px;
                                   background: url('../../../assets/icons/bx-chevron-down-light.png') no-repeat center center;
                               }
