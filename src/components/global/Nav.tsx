@@ -78,11 +78,12 @@ const Nav: React.FC = () => {
                             className="nav__menu__list__item__link"
                             onClick={() => toggleSubmenu('plataformas')}
                             to="#"
-                        >
+                        > <i className="bx bx-grid-alt"></i> 
                             <span className={`${activeSubmenu === 'plataformas' ? 'active' : ''}`}>
-                                <i className='bx bx-grid-alt'></i> Plataformas Digitais
+                                Plataformas Digitais
                             </span>
                         </Link>
+                        
 
                         <div className={`submenu ${activeSubmenu === 'plataformas' ? 'submenu--active' : ''}`}>
                             <div className="container">
